@@ -12,16 +12,21 @@ import java.io.PrintWriter;
  */
 public class LinkedRepresentation<T> implements BSPTree<T> {
 
+	//String rootNode;
     /**
      * Constructs empty tree.
      */
     public LinkedRepresentation() {
         // Implement me!
+		System.out.println("LinkedRepresentation");
     } // end of LinkedRepresentation()
 
     @Override
     public void setRootNode(T nodeLabel) {
         // Implement me!
+		String rootNode = (String) nodeLabel;
+		
+		System.out.println("testsetrootnode");
     } // end of setRootNode()
 
     @Override
