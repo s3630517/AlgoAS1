@@ -39,6 +39,7 @@ public class SequentialRepresentation<T> implements BSPTree<T> {
         // Implement me!
 		//String rootNode = (String) nodeLabel;
 		//treeArray[0] = rootNode;
+	    	root = treeArray[0];
 		if(root==EMPTY_NODE){
 			root = nodeLabel;
 			
