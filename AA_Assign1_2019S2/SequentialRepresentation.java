@@ -39,8 +39,8 @@ public class SequentialRepresentation<T> implements BSPTree<T> {
         // Implement me!
 		//String rootNode = (String) nodeLabel;
 		//treeArray[0] = rootNode;
-		if(treeArray[0]==EMPTY_NODE){
-			treeArray[0]= nodeLabel;
+		if(root==EMPTY_NODE){
+			root = nodeLabel;
 			
 			System.out.println("testsetrootnode");
 		}else{
@@ -53,6 +53,7 @@ public class SequentialRepresentation<T> implements BSPTree<T> {
     public void splitNode(T srcLabel, T leftChild, T rightChild) {
         // Implement me!
 		int j=0;
+		boolean found = false;
 		for(int i=0; i<treeArray.length; i++) {
 			if(treeArray[i].equals(srcLabel)){
 				j = (i * 2) + 1;
@@ -60,11 +61,13 @@ public class SequentialRepresentation<T> implements BSPTree<T> {
 				treeArray[j+1]=rightChild;
 				//System.out.println("testif");
 				System.out.println(Arrays.toString(treeArray));
+				found = true;
 				break;
-			}else {
-				//System.out.println("node not found" + treeArray[i]);
 			}
 			//System.out.println(treeArray[i]);
+		}
+		if (!found) {
+			//System.out.println("node not found" + treeArray[i]);
 		}
 		
     } // end of splitNode
